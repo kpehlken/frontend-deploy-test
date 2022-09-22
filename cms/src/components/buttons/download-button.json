@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_buttons_download_buttons",
+  "info": {
+    "displayName": "Download-Button",
+    "icon": "arrow-alt-circle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "enumeration",
+      "enum": [
+        "PDF",
+        "Dokument",
+        "Bild",
+        "Download"
+      ],
+      "default": "Download"
+    },
+    "Datei": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "therapiezentrum_unterseitens",
+  "info": {
+    "singularName": "therapiezentrum-unterseiten",
+    "pluralName": "therapiezentrum-unterseitens",
+    "displayName": "Unterseiten",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "richtext"
+    },
+    "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titel"
+    },
+    "Bildanordnung": {
+      "type": "enumeration",
+      "enum": [
+        "Links",
+        "Rechts"
+      ],
+      "default": "Links"
+    }
+  }
+}

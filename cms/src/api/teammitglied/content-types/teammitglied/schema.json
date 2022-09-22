@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teammitglieds",
+  "info": {
+    "singularName": "teammitglied",
+    "pluralName": "teammitglieds",
+    "displayName": "Teammitglied",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Vorname": {
+      "type": "string"
+    },
+    "Nachname": {
+      "type": "string"
+    },
+    "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Position": {
+      "type": "string"
+    },
+    "Beschreibung": {
+      "type": "richtext"
+    }
+  }
+}

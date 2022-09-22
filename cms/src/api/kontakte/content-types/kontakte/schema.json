@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kontaktes",
+  "info": {
+    "singularName": "kontakte",
+    "pluralName": "kontaktes",
+    "displayName": "Kontakte",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Slug": {
+      "type": "uid"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Telefonnummer": {
+      "type": "string"
+    },
+    "Strasse": {
+      "type": "string",
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "PLZ": {
+      "type": "string",
+      "required": true
+    },
+    "Ort": {
+      "type": "string",
+      "required": true
+    },
+    "FAX": {
+      "type": "string"
+    },
+    "Sonstiges": {
+      "type": "richtext"
+    },
+    "Bild": {
+      "allowedTypes": ["images", "files", "videos", "audios"],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

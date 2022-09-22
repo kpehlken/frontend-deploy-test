@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_entries",
+  "info": {
+    "singularName": "blog-entry",
+    "pluralName": "blog-entries",
+    "displayName": "Blog-Eintrag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Beschreibung": {
+      "type": "richtext"
+    },
+    "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titel"
+    },
+    "Bildanordnung": {
+      "type": "enumeration",
+      "enum": [
+        "Links",
+        "Rechts"
+      ],
+      "required": false,
+      "default": "Links"
+    }
+  }
+}

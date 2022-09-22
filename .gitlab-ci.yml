@@ -1,0 +1,71 @@
+image: node:16
+
+stages:
+  - install
+  - build
+  - lint
+
+frontend-install:
+  stage: install
+  script:
+    - cd frontend/
+    - yarn
+  artifacts:
+    paths:
+      - frontend/
+  only:
+    - merge_requests
+
+cms-install:
+  stage: install
+  script:
+    - cd cms/
+    - yarn
+  artifacts:
+    paths:
+      - cms/
+  only:
+    - merge_requests
+
+frontend-build:
+  stage: build
+  before_script:
+    - cd frontend
+    - yarn
+  script:
+    - yarn build
+  artifacts:
+    when: on_success
+    paths:
+      - public
+  only:
+    - merge_requests
+    - master
+
+cms-build:
+  stage: build
+  before_script:
+    - cd cms
+    - yarn
+  script:
+    - yarn build
+  artifacts:
+    when: on_success
+    paths:
+      - public
+  only:
+    - merge_requests
+    - master
+
+format-and-lint:
+  stage: lint
+  needs: [frontend-install]
+  script:
+    - cd frontend/
+    - yarn run format
+    - yarn run lint
+  artifacts:
+    paths:
+      - frontend/
+  only:
+    - merge_requests

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_unterseite_unterseites",
+  "info": {
+    "displayName": "Unterseite"
+  },
+  "options": {},
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "richtext"
+    },
+    "Bild": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Bildanorderung": {
+      "type": "enumeration",
+      "enum": [
+        "Links",
+        "Rechts"
+      ],
+      "default": "Links"
+    }
+  }
+}
